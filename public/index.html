@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='store'>
+<head>
+  <meta charset="utf-8">
+  <title>Angular Learning</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div ng-controller="StoreController as store">
+    <h1>{{store.products[0].name}}</h1>
+    <h2>${{store.products[0].price}}</h2>
+    <p>{{store.products[0].description}}</p>
+    <button ng-show="store.products.canPurchase"> Add to Cart </button>
+  </div>
+
+  <script type="text/javascript" src="./assets/JavaScript/angular.min.js"></script>
+  <script type="text/javascript" src="./assets/JavaScript/app.js"></script>
+
+  </script>
+</body>
+</html>
