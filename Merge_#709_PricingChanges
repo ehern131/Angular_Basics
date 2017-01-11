@@ -1,0 +1,17 @@
+All changes affecting pricing page from Master merge #709
+
+commit e23dfbb
+        -app/views/home/pricing.html.slim
+
+commit 3fb8bdb
+        -app/assets/stylesheets/module/pricing.scss
+        -app/views/home/pricing.html.slim
+
+commit 9726081
+        -app/assets/stylesheets/module/pricing.scss
+        -app/views/home/pricing.html.slim
+        -config/initializers/rawshorts/pricing.yml
+
+commit 08a73f0
+        -app/assets/stylesheets/module/pricing.scss
+        -app/views/home/pricing.html.slim

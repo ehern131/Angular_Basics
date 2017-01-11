@@ -7,18 +7,19 @@
 
   var gems = [
     {
-      name:"Emerald Gem",
+      name:"Icosahedron",
       price: 1.50,
-      description: "Colored green by trace amounts of chromium and sometimes vanadium.",
+      description: "A polyhedron with twenty flat faces.",
+
       // canPurchase: true
       images: [
         {
-          full: "http://www.gifmania.us/Objects/Jewelry/Gemstones/Emeralds/Emerald-88746.gif",
-          thumb: "http://www.gifmania.us/Objects/Jewelry/Gemstones/Emeralds/Emerald-88746.gif"
+          full: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Icosahedron.gif",
+          thumb: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Icosahedron.gif"
         },
         {
-          full: "http://www.gifmania.us/Objects/Jewelry/Gemstones/Emeralds/Emerald-88746.gif",
-          thumb: "http://www.gifmania.us/Objects/Jewelry/Gemstones/Emeralds/Emerald-88746.gif"
+          full: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Icosahedron.gif",
+          thumb: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Icosahedron.gif"
         }
       ]
     },
@@ -35,6 +36,22 @@
         {
           full: 'https://thesithlibrary.files.wordpress.com/2008/03/rotating_dodecahedron.gif',
           thumb: 'https://thesithlibrary.files.wordpress.com/2008/03/rotating_dodecahedron.gif',
+        }
+      ]
+    },
+    {
+      name: 'Tetrahedron',
+      price: 2.25,
+      description: 'A polyhedron with four flat faces.',
+      // canPurchase: false
+      images: [
+        {
+          full: 'http://i.giphy.com/HTWjbyY5prTW.gif',
+          thumb: 'http://i.giphy.com/HTWjbyY5prTW.gif'
+        },
+        {
+          full: 'http://i.giphy.com/HTWjbyY5prTW.gif',
+          thumb: 'http://i.giphy.com/HTWjbyY5prTW.gif',
         }
       ]
     }

@@ -5,16 +5,44 @@
   <title>Angular Learning</title>
   <link rel="shortcut icon" href="#"/>
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 <body>
 
   <body ng-controller="StoreController as store">
-    <div ng-repeat="product in store.products">
-      <h1>{{product.name}}</h1>
+    <div class="header col-md-offset-4 col-lg-offset-5">Erick's Angular Store!</div>
+    <div class="col-md-3 productBox" ng-repeat="product in store.products">
+      <h1 class="col-md-offset-3">{{product.name}}</h1><br>
       <!-- <h2>${{product.price}}</h2> -->
-      <p>{{product.description}}</p>
-      <em class="pull-right">{{product.price | currency }}</em>
-      <img ng-src="{{product.images[0].full}}"/>
+      <!-- <p class="col-md-offset-3">{{product.description}}</p> -->
+      <img class="col-md-offset-3 col-md-6 productImg" ng-src="{{product.images[0].full}}"/>
+      <em>{{product.price | currency }}</em>
+      <section ng-init="tab = 1">
+        <ul class="col-md-offset-1 nav nav-pills">
+          <li ng-class="{active:tab === 1}">
+            <a href ng-click="tab = 1">Description</a>
+          </li>
+          <li ng-class="{active:tab === 2}">
+            <a href ng-click="tab = 2">Specifications</a>
+          </li>
+          <li ng-class="{active:tab === 3}">
+            <a href ng-click="tab = 3">Reviews</a>
+          </li>
+        </ul>
+
+        <div class="panel" ng-show='tab === 1'>
+          <h4>Description</h4>
+          <p>{{product.description}}</p>
+        </div>
+        <div class="panel" ng-show='tab === 2'>
+          <h4>Specifications</h4>
+          <blockquote>None yet</blockquote>
+        </div>
+        <div class="panel" ng-show='tab === 3'>
+          <h4>Reviews</h4>
+          <blockquote>None yet</blockquote>
+        </div>
+      </section>
       <button ng-show="product.canPurchase">
         Add to Cart </button>
       </div>
@@ -22,7 +50,5 @@
 
     <script type="text/javascript" src="./assets/JavaScript/angular.min.js"></script>
     <script type="text/javascript" src="./assets/JavaScript/app.js"></script>
-
-  </script>
-</body>
-</html>
+  </body>
+  </html>
