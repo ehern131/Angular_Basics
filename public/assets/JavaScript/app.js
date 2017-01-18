@@ -19,7 +19,7 @@
   var gems = [
     {
       name:"Icosahedron",
-      price: 1.50,
+      price: 3.25,
       description: "A polyhedron with twenty flat faces.",
 
       // canPurchase: true

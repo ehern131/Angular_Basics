@@ -18,29 +18,29 @@
       <img class="col-md-offset-3 col-md-6 productImg" ng-src="{{product.images[0].full}}"/>
       <em>{{product.price | currency }}</em>
       <section ng-controller="PanelController as panel">
+
         <ul class="col-md-offset-1 nav nav-pills">
           <li ng-class="{active:panel.isSelected(1)}">
-            <a href ng-click="panel.selectTab(1)">Description</a>
+            <a href="" ng-click="panel.selectTab(1)">Description</a>
           </li>
           <li ng-class="{active:panel.isSelected(2)}">
-            <a href ng-click="panel.selectTab(2)">Specifications</a>
+            <a href="" ng-click="panel.selectTab(2)">Specifications</a>
           </li>
           <li ng-class="{active:panel.isSelected(3)}">
-            <a href ng-click="panel.selectTab(3)">Reviews</a>
+            <a href="" ng-click="panel.selectTab(3)">Reviews</a>
           </li>
         </ul>
 
-        <div class="panel" ng-show='active:panel.isSelected(1)'>
+        <div class="panel" ng-show='panel.isSelected(1)'>
           <h4>Description</h4>
           <p>{{product.description}}</p>
         </div>
-        <div class="panel" ng-show='tab === 2'>
+        <div class="panel" ng-show='panel.isSelected(2)'>
           <h4>Specifications</h4>
           <blockquote>None yet</blockquote>
         </div>
-        <div class="panel" ng-show='tab === 3'>
+        <div class="panel" ng-show='panel.isSelected(3)'>
           <h4>Reviews</h4>
-          <blockquote>None yet</blockquote>
         </div>
       </section>
       <button ng-show="product.canPurchase">
