@@ -1,3 +1,8 @@
+
+body {
+  background-color: #67809F;
+}
+
 em {
   font-weight: bold;
 }
@@ -12,9 +17,23 @@ em {
   border: solid 1px lightgray;
   margin-left: 10px;
   margin-top: 30px;
+  background-color: white;
+  border: solid 6px gray;
 }
 
 .productImg {
   max-height: 220px;
   max-width: 220px;
+}
+
+.stars {
+  margin-bottom: 10px;
+}
+
+.reviewText {
+  margin-bottom: 10px;
+}
+
+.review {
+  margin-bottom: 20px;
 }

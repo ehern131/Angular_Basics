@@ -1,9 +1,11 @@
 (function(){
   var app = angular.module('store', []);
 
+
   app.controller('StoreController', function(){
     this.products = gems;
   });
+
 
   app.controller('PanelController', function(){
     this.tab = 1;
@@ -13,6 +15,16 @@
     };
     this.isSelected = function(checkTab){
       return this.tab === checkTab;
+    };
+  });
+
+
+  app.controller('ReviewController', function(){
+    this.review= {};
+
+    this.addReview = function(product){
+      product.reviews.push(this.review);
+      this.review = {};
     };
   });
 
@@ -32,6 +44,18 @@
           full: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Icosahedron.gif",
           thumb: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Icosahedron.gif"
         }
+      ],
+      reviews: [
+        {
+          stars: 5,
+          body: "I love this product!",
+          author: "joe@thomas.com"
+        },
+        {
+          stars: 4,
+          body: "Dude, this is the best!",
+          author: "erickh@blah.co"
+        }
       ]
     },
     {
@@ -48,6 +72,18 @@
           full: 'https://thesithlibrary.files.wordpress.com/2008/03/rotating_dodecahedron.gif',
           thumb: 'https://thesithlibrary.files.wordpress.com/2008/03/rotating_dodecahedron.gif',
         }
+      ],
+      reviews: [
+        {
+          stars: 5,
+          body: "I love this product!",
+          author: "joe@thomas.com"
+        },
+        {
+          stars: 4,
+          body: "Dude, this is the best!",
+          author: "erickh@blah.co"
+        }
       ]
     },
     {
@@ -63,6 +99,18 @@
         {
           full: 'http://i.giphy.com/HTWjbyY5prTW.gif',
           thumb: 'http://i.giphy.com/HTWjbyY5prTW.gif',
+        }
+      ],
+      reviews: [
+        {
+          stars: 5,
+          body: "I love this product!",
+          author: "joe@thomas.com"
+        },
+        {
+          stars: 4,
+          body: "Dude, this is the best!",
+          author: "erickh@blah.co"
         }
       ]
     }
